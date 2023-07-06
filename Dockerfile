@@ -15,7 +15,7 @@ RUN pip install -q opencv-contrib-python
 RUN pip install -q controlnet_aux
 
 # We add the banana boilerplate here
-ADD server.py .
+# ADD server.py .
 
 # Add your model weight files 
 # (in this case we have a python script)
@@ -28,4 +28,4 @@ ADD app.py .
 
 EXPOSE 8000
 
-CMD python3 -u server.py
+# CMD python3 -u server.py
