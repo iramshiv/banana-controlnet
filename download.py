@@ -7,7 +7,7 @@ from diffusers import UniPCMultistepScheduler, StableDiffusionControlNetPipeline
 
 def download_model():
     # do a dry run of loading the huggingface model, which will download weights
-    controlnet = ControlNetModel.from_pretrained("lllyasviel/sd-controlnet-canny", torch_dtype=torch.float16)
+    controlnet = ControlNetModel.from_pretrained("runwayml/stable-diffusion-v1-5", torch_dtype=torch.float16)
     model = StableDiffusionControlNetPipeline.from_pretrained(
         "runwayml/stable-diffusion-v1-5", controlnet=controlnet, safety_checker=None, torch_dtype=torch.float16
     )
