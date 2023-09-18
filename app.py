@@ -22,7 +22,6 @@ def init():
 
     context = {
             "model": model,
-            "controlnet" : controlnet
         }
     
     return context
@@ -70,7 +69,10 @@ def handler(context: dict, request: Request) -> Response:
     image_base64 = base64.b64encode(buffered.getvalue()).decode('utf-8')
 
     # Return the results as a dictionary
+    
     return Response(
+        'canny_base64': canny_base64,
+        'image_base64': image_base64,
         json = {"outputs": outputs}, 
         status=200
     )
