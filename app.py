@@ -25,7 +25,7 @@ def init():
             "controlnet" : controlnet
         }
     
-        return context
+    return context
 
 # Inference is ran for every server call
 # Reference your preloaded global model variable here.
